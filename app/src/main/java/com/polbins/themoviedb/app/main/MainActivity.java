@@ -1,5 +1,6 @@
 package com.polbins.themoviedb.app.main;
 
+import android.content.Intent;
 import android.os.Handler;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.AppCompatActivity;
@@ -17,6 +18,7 @@ import com.polbins.themoviedb.R;
 import com.polbins.themoviedb.api.model.Images;
 import com.polbins.themoviedb.api.model.Movie;
 import com.polbins.themoviedb.app.App;
+import com.polbins.themoviedb.app.detail.DetailActivity;
 
 import java.util.List;
 
@@ -27,6 +29,8 @@ import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 import static android.R.attr.button;
+import static com.polbins.themoviedb.app.detail.DetailActivity.MOVIE_ID;
+import static com.polbins.themoviedb.app.detail.DetailActivity.MOVIE_TITLE;
 
 public class MainActivity extends AppCompatActivity implements
         MainContract.View,
@@ -147,6 +151,10 @@ public class MainActivity extends AppCompatActivity implements
 
     @Override
     public void onItemClick(int movieId, String movieTitle) {
+        Intent i = new Intent(this, DetailActivity.class);
+        i.putExtra(MOVIE_ID, movieId);
+        i.putExtra(MOVIE_TITLE, movieTitle);
+        startActivity(i);
     }
 
     @OnClick(R.id.textView)
