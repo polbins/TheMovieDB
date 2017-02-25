@@ -29,10 +29,10 @@ public interface ApiService {
         }
     }
 
-    @GET("/discover/movie?sort_by={sort_by}&page={page}")
+    @GET("/3/discover/movie")
     Call<Movies> getMovies(@Query("sort_by") SortBy sortBy, @Query("page") int page);
 
-    @GET("/movie/{id}")
+    @GET("/3/movie/{id}")
     Call<Movies> getMovie(@Query("id") int id);
 
 }
