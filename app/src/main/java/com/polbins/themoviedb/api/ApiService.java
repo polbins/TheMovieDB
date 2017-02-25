@@ -1,6 +1,7 @@
 package com.polbins.themoviedb.api;
 
 import com.polbins.themoviedb.api.model.Configuration;
+import com.polbins.themoviedb.api.model.Movie;
 import com.polbins.themoviedb.api.model.Movies;
 
 import retrofit2.Call;
@@ -35,7 +36,7 @@ public interface ApiService {
     Call<Movies> getMovies(@Query("sort_by") SortBy sortBy, @Query("page") int page);
 
     @GET("/3/movie/{id}")
-    Call<Movies> getMovie(@Query("id") int id);
+    Call<Movie> getMovie(@Query("id") int id);
 
 
     @Headers("Cache-Control: public, max-stale=2419200") // 4 weeks
