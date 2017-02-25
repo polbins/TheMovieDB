@@ -1,6 +1,7 @@
 package com.polbins.themoviedb.app.main;
 
 import com.polbins.themoviedb.api.ApiService;
+import com.polbins.themoviedb.api.model.Configuration;
 import com.polbins.themoviedb.api.model.Movies;
 
 import javax.inject.Inject;
@@ -18,6 +19,7 @@ public class MainPresenter implements MainContract.Presenter {
     private ApiService apiService;
 
     private int page = 1;
+    private Configuration configuration;
 
     @Inject
     MainPresenter(MainContract.View view, ApiService apiService) {
@@ -29,6 +31,23 @@ public class MainPresenter implements MainContract.Presenter {
     public void start() {
         view.showLoading(false);
         getMovies(true);
+        getConfiguration();
+    }
+
+    private void getConfiguration() {
+        Call<Configuration> call = apiService.getConfiguration();
+        call.enqueue(new Callback<Configuration>() {
+            @Override
+            public void onResponse(Call<Configuration> call, Response<Configuration> response) {
+                if (response.isSuccessful()) {
+                    view.onConfigurationSet(response.body().images);
+                }
+            }
+
+            @Override
+            public void onFailure(Call<Configuration> call, Throwable t) {
+            }
+        });
     }
 
     @Override
