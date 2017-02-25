@@ -3,4 +3,14 @@
     <string name="base_url">https://api.themoviedb.org/</string>
     <string name="api_key">3fa9058382669f72dcb18fb405b7a831</string>
     <string name="generic_error">Oops! Something went wrong,\nPlease try again later...</string>
+    <string name="book_the_movie_button">Book the Movie</string>
+    <string name="genres_header">Genres</string>
+    <string name="overview_header">Overview</string>
+    <string name="duration_header">Duration</string>
+    <string name="language_header">Language</string>
+
+    <plurals name="duration">
+        <item quantity="one">%d minute</item>
+        <item quantity="other">%1$d minutes</item>
+    </plurals>
 </resources>

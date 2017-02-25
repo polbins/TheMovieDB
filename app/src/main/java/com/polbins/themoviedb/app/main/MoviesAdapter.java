@@ -68,14 +68,22 @@ public class MoviesAdapter extends RecyclerView.Adapter<MoviesAdapter.ViewHolder
 
     @NonNull
     private String getFullImageUrl(Movie movie) {
+        String imagePath;
+
+        if (movie.posterPath != null && !movie.posterPath.isEmpty()) {
+            imagePath = movie.posterPath;
+        } else {
+            imagePath = movie.backdropPath;
+        }
+
         if (images != null && images.baseUrl != null && !images.baseUrl.isEmpty()) {
             if (images.posterSizes != null) {
                 if (images.posterSizes.size() > 4) {
                     // usually equal to 'w500'
-                    return images.baseUrl + images.posterSizes.get(4) + movie.posterPath;
+                    return images.baseUrl + images.posterSizes.get(4) + imagePath;
                 } else {
                     // back-off to hard-coded value
-                    return images.baseUrl + "w500" + movie.posterPath;
+                    return images.baseUrl + "w500" + imagePath;
                 }
             }
         }

@@ -4,4 +4,5 @@
     <dimen name="activity_vertical_margin">16dp</dimen>
     <dimen name="itemImageHeight">180dp</dimen>
     <dimen name="itemPopularityHeight">30dp</dimen>
+    <dimen name="detailPosterHeight">240dp</dimen>
 </resources>

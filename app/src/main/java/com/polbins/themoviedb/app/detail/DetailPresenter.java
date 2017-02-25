@@ -27,8 +27,8 @@ public class DetailPresenter implements DetailContract.Presenter {
     @Override
     public void start(int movieId) {
         view.showLoading();
-        getMovie(movieId);
         getConfiguration();
+        getMovie(movieId);
     }
 
     private void getConfiguration() {
