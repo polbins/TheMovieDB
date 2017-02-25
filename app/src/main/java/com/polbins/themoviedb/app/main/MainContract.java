@@ -1,5 +1,6 @@
 package com.polbins.themoviedb.app.main;
 
+import com.polbins.themoviedb.api.model.Images;
 import com.polbins.themoviedb.api.model.Movie;
 
 import java.util.List;
@@ -17,6 +18,8 @@ public interface MainContract {
         void showContent(List<Movie> movies, boolean isRefresh);
 
         void showError();
+
+        void onConfigurationSet(Images images);
 
     }
 

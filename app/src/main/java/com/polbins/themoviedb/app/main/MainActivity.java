@@ -134,6 +134,10 @@ public class MainActivity extends AppCompatActivity implements
         errorView.setVisibility(View.VISIBLE);
     }
 
+    @Override
+    public void onConfigurationSet(Images images) {
+    }
+
     @OnClick(R.id.textView)
     void onClickErrorView() {
         presenter.start();

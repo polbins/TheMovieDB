@@ -1,6 +1,8 @@
 package com.polbins.themoviedb.app.main;
 
 import com.polbins.themoviedb.api.ApiService;
+import com.polbins.themoviedb.api.model.Configuration;
+import com.polbins.themoviedb.api.model.Images;
 import com.polbins.themoviedb.api.model.Movie;
 import com.polbins.themoviedb.api.model.Movies;
 import com.polbins.themoviedb.app.utils.JsonTestUtil;
@@ -36,6 +38,7 @@ public class MainPresenterTest {
     private ApiService.SortBy defaultApiSortBy = ApiService.SortBy.RELEASE_DATE_DESCENDING;
     private List<Movie> moviesFirstPage;
     private List<Movie> moviesSecondPage;
+    private Images images;
 
     @Before
     public void setup() {
@@ -46,14 +49,18 @@ public class MainPresenterTest {
         // Initialize API Models
         Movies moviesFirstPage = JsonTestUtil.getJsonFromFile("movies_first_page.json", Movies.class);
         Movies moviesSecondPage = JsonTestUtil.getJsonFromFile("movies_second_page.json", Movies.class);
+        Configuration configuration = JsonTestUtil.getJsonFromFile("configuration.json", Configuration.class);
         this.moviesFirstPage = moviesFirstPage.movies;
         this.moviesSecondPage = moviesSecondPage.movies;
+        this.images = configuration.images;
 
         // Mock API Calls
         when(apiService.getMovies(defaultApiSortBy, 1))
                 .thenReturn(RetrofitTestUtil.createCall(moviesFirstPage));
         when(apiService.getMovies(defaultApiSortBy, 2))
                 .thenReturn(RetrofitTestUtil.createCall(moviesSecondPage));
+        when(apiService.getConfiguration())
+                .thenReturn(RetrofitTestUtil.createCall(configuration));
     }
 
     private void makeGetMoviesFail() {
@@ -67,6 +74,7 @@ public class MainPresenterTest {
 
         verify(view).showLoading(false);
         verify(view).showContent(moviesFirstPage, true);
+        verify(view).onConfigurationSet(images);
     }
 
     @Test
