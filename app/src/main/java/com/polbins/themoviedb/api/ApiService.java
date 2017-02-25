@@ -1,9 +1,11 @@
 package com.polbins.themoviedb.api;
 
+import com.polbins.themoviedb.api.model.Configuration;
 import com.polbins.themoviedb.api.model.Movies;
 
 import retrofit2.Call;
 import retrofit2.http.GET;
+import retrofit2.http.Headers;
 import retrofit2.http.Query;
 
 /**
@@ -34,5 +36,10 @@ public interface ApiService {
 
     @GET("/3/movie/{id}")
     Call<Movies> getMovie(@Query("id") int id);
+
+
+    @Headers("Cache-Control: public, max-stale=2419200") // 4 weeks
+    @GET("/3/configuration")
+    Call<Configuration> getConfiguration();
 
 }
