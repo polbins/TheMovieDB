@@ -1,0 +1,80 @@
+{
+    "adult": false,
+    "backdrop_path": "/dkMD5qlogeRMiEixC4YNPUvax2T.jpg",
+    "belongs_to_collection": {
+        "backdrop_path": "/pJjIH9QN0OkHFV9eue6XfRVnPkr.jpg",
+        "id": 328,
+        "name": "Jurassic Park Collection",
+        "poster_path": "/qIm2nHXLpBBdMxi8dvfrnDkBUDh.jpg"
+    },
+    "budget": 150000000,
+    "genres": [
+        {
+            "id": 28,
+            "name": "Action"
+        },
+        {
+            "id": 12,
+            "name": "Adventure"
+        },
+        {
+            "id": 878,
+            "name": "Science Fiction"
+        },
+        {
+            "id": 53,
+            "name": "Thriller"
+        }
+    ],
+    "homepage": "http://www.jurassicworld.com/",
+    "id": 135397,
+    "imdb_id": "tt0369610",
+    "original_language": "en",
+    "original_title": "Jurassic World",
+    "overview": "Twenty-two years after the events of Jurassic Park, Isla Nublar now features a fully functioning dinosaur theme park, Jurassic World, as originally envisioned by John Hammond.",
+    "popularity": 116.424587,
+    "poster_path": "/jjBgi2r5cRt36xF6iNUEhzscEcb.jpg",
+    "production_companies": [
+        {
+            "id": 13,
+            "name": "Universal Studios"
+        },
+        {
+            "id": 56,
+            "name": "Amblin Entertainment"
+        },
+        {
+            "id": 923,
+            "name": "Legendary Pictures"
+        },
+        {
+            "id": 3341,
+            "name": "Fuji Television Network"
+        },
+        {
+            "id": 6452,
+            "name": "Dentsu"
+        }
+    ],
+    "production_countries": [
+        {
+            "iso_3166_1": "US",
+            "name": "United States of America"
+        }
+    ],
+    "release_date": "2015-06-09",
+    "revenue": 1513528810,
+    "runtime": 124,
+    "spoken_languages": [
+        {
+            "iso_639_1": "en",
+            "name": "English"
+        }
+    ],
+    "status": "Released",
+    "tagline": "The park is open.",
+    "title": "Jurassic World",
+    "video": false,
+    "vote_average": 6.5,
+    "vote_count": 6205
+}
