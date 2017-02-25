@@ -27,11 +27,13 @@ public class MoviesAdapter extends RecyclerView.Adapter<MoviesAdapter.ViewHolder
     private List<Movie> movies;
     private Activity activity;
     private Images images;
+    private ItemClickListener itemClickListener;
 
-    public MoviesAdapter(List<Movie> movies, Activity activity, Images images) {
+    public MoviesAdapter(List<Movie> movies, Activity activity, Images images, ItemClickListener itemClickListener) {
         this.movies = movies;
         this.activity = activity;
         this.images = images;
+        this.itemClickListener = itemClickListener;
     }
 
     @Override
@@ -43,7 +45,7 @@ public class MoviesAdapter extends RecyclerView.Adapter<MoviesAdapter.ViewHolder
 
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
-        Movie movie = movies.get(position);
+        final Movie movie = movies.get(position);
 
         String fullImageUrl = getFullImageUrl(movie);
         if (!fullImageUrl.isEmpty()) {
@@ -56,6 +58,12 @@ public class MoviesAdapter extends RecyclerView.Adapter<MoviesAdapter.ViewHolder
         String popularity = getPopularityString(movie.popularity);
         holder.popularityTextView.setText(popularity);
         holder.titleTextView.setText(movie.title);
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                itemClickListener.onItemClick(movie.id, movie.title);
+            }
+        });
     }
 
     @NonNull
@@ -93,6 +101,7 @@ public class MoviesAdapter extends RecyclerView.Adapter<MoviesAdapter.ViewHolder
     }
 
     static class ViewHolder extends RecyclerView.ViewHolder {
+        View itemView;
         @BindView(R.id.imageView)
         ImageView imageView;
         @BindView(R.id.popularityTextView)
@@ -102,6 +111,7 @@ public class MoviesAdapter extends RecyclerView.Adapter<MoviesAdapter.ViewHolder
 
         ViewHolder(View itemView) {
             super(itemView);
+            this.itemView = itemView;
             ButterKnife.bind(this, itemView);
         }
 
@@ -110,6 +120,12 @@ public class MoviesAdapter extends RecyclerView.Adapter<MoviesAdapter.ViewHolder
     private String getPopularityString(float popularity) {
         java.text.DecimalFormat decimalFormat = new java.text.DecimalFormat("#.#");
         return decimalFormat.format(popularity);
+    }
+
+    public interface ItemClickListener {
+
+        void onItemClick(int movieId, String title);
+
     }
 
 }

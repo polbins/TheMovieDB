@@ -30,7 +30,7 @@ import static android.R.attr.button;
 
 public class MainActivity extends AppCompatActivity implements
         MainContract.View,
-        SwipeRefreshLayout.OnRefreshListener, EndlessScrollListener.ScrollToBottomListener {
+        SwipeRefreshLayout.OnRefreshListener, EndlessScrollListener.ScrollToBottomListener, MoviesAdapter.ItemClickListener {
     private static final String TAG = "Main";
 
     @Inject
@@ -104,7 +104,7 @@ public class MainActivity extends AppCompatActivity implements
     @Override
     public void showContent(List<Movie> movies, boolean isRefresh) {
         if (moviesAdapter == null) {
-            moviesAdapter = new MoviesAdapter(movies, this, images);
+            moviesAdapter = new MoviesAdapter(movies, this, images, this);
             contentView.setAdapter(moviesAdapter);
         } else {
             if (isRefresh) {
@@ -143,6 +143,10 @@ public class MainActivity extends AppCompatActivity implements
         if (moviesAdapter != null) {
             moviesAdapter.setImages(images);
         }
+    }
+
+    @Override
+    public void onItemClick(int movieId, String movieTitle) {
     }
 
     @OnClick(R.id.textView)
