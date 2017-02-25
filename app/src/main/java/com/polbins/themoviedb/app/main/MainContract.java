@@ -12,7 +12,7 @@ public interface MainContract {
 
     interface View {
 
-        void showLoading();
+        void showLoading(boolean isRefresh);
 
         void showContent(List<Movie> movies, boolean isRefresh);
 

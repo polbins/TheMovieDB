@@ -2,6 +2,7 @@ package com.polbins.themoviedb.app.main;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.Toast;
 
 import com.polbins.themoviedb.R;
@@ -15,6 +16,8 @@ import javax.inject.Inject;
 import butterknife.ButterKnife;
 
 public class MainActivity extends AppCompatActivity implements MainContract.View {
+    private static final String TAG = "Main";
+
     @Inject
     MainPresenter presenter;
 
@@ -40,7 +43,7 @@ public class MainActivity extends AppCompatActivity implements MainContract.View
     }
 
     @Override
-    public void showLoading() {
+    public void showLoading(boolean isRefresh) {
         Toast.makeText(this, "Loading Called", Toast.LENGTH_SHORT).show();
     }
 

@@ -20,7 +20,7 @@ public class MainPresenter implements MainContract.Presenter {
 
     @Override
     public void start() {
-        view.showLoading();
+        view.showLoading(false);
     }
 
     @Override
