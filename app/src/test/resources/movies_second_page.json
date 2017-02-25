@@ -1,0 +1,394 @@
+{
+    "page": 2,
+    "results": [
+        {
+            "adult": false,
+            "backdrop_path": null,
+            "genre_ids": [
+                878,
+                28
+            ],
+            "id": 400507,
+            "original_language": "en",
+            "original_title": "X-Force",
+            "overview": "A time-traveler assembles a team of mutants in order to prevent the wrecked future he came from.",
+            "popularity": 1.039663,
+            "poster_path": "/rbAZ7P9eHQQZp7sKcM36f1OZvF5.jpg",
+            "release_date": "2020-12-31",
+            "title": "X-Force",
+            "video": false,
+            "vote_average": 0,
+            "vote_count": 0
+        },
+        {
+            "adult": false,
+            "backdrop_path": null,
+            "genre_ids": [
+                10752,
+                16,
+                28,
+                12,
+                35,
+                18,
+                14,
+                27,
+                878,
+                53
+            ],
+            "id": 431969,
+            "original_language": "en",
+            "original_title": "Unity, Guardians Versus Corruption: Rise of the Corruption",
+            "overview": "In the year 1897, the Andromeda Galaxy's Core collapses, and in its place is a portal which transports armies of evil to the galaxy, allowing them to consume the universe.",
+            "popularity": 1.002435,
+            "poster_path": null,
+            "release_date": "2020-12-25",
+            "title": "Unity, Guardians Versus Corruption: Rise of the Corruption",
+            "video": false,
+            "vote_average": 0,
+            "vote_count": 0
+        },
+        {
+            "adult": false,
+            "backdrop_path": null,
+            "genre_ids": [
+                9648,
+                18
+            ],
+            "id": 431963,
+            "original_language": "en",
+            "original_title": "Alissa",
+            "overview": "Alissa is a Jr. at Fariveiw High School who lives in Boulder, Colorado, until on night, Alissa gets into a car crash and dies. Alissa then has the chance to go back into the mortal world, but it is 20 years into the future.",
+            "popularity": 1.002,
+            "poster_path": "/q1Dra7idlzyaNHV41CBnfeN4Ymd.jpg",
+            "release_date": "2020-12-25",
+            "title": "Alissa",
+            "video": false,
+            "vote_average": 0,
+            "vote_count": 0
+        },
+        {
+            "adult": false,
+            "backdrop_path": null,
+            "genre_ids": [
+                10402,
+                16,
+                35,
+                18,
+                10751
+            ],
+            "id": 438695,
+            "original_language": "en",
+            "original_title": "Sing 2",
+            "overview": "Sequel to the 2016 animated film, 'Sing'.",
+            "popularity": 1.002005,
+            "poster_path": null,
+            "release_date": "2020-12-25",
+            "title": "Sing 2",
+            "video": false,
+            "vote_average": 0,
+            "vote_count": 0
+        },
+        {
+            "adult": false,
+            "backdrop_path": null,
+            "genre_ids": [
+                12,
+                16,
+                35,
+                10402
+            ],
+            "id": 431516,
+            "original_language": "en",
+            "original_title": "Vivo",
+            "overview": "A monkey strives to fulfill his musical destiny by traveling from Havana to Miami.",
+            "popularity": 1.002,
+            "poster_path": null,
+            "release_date": "2020-12-17",
+            "title": "Vivo",
+            "video": false,
+            "vote_average": 0,
+            "vote_count": 0
+        },
+        {
+            "adult": false,
+            "backdrop_path": null,
+            "genre_ids": [
+                878
+            ],
+            "id": 431973,
+            "original_language": "en",
+            "original_title": "Untitled Space Adventure",
+            "overview": "Race through the universe, careen through the stars.",
+            "popularity": 1.002,
+            "poster_path": null,
+            "release_date": "2020-12-11",
+            "title": "Untitled Space Adventure",
+            "video": false,
+            "vote_average": 0,
+            "vote_count": 0
+        },
+        {
+            "adult": false,
+            "backdrop_path": null,
+            "genre_ids": [
+                35
+            ],
+            "id": 431974,
+            "original_language": "en",
+            "original_title": "The Angel Investor",
+            "overview": "A banker leaves a fortune for him to inherit in the 'next life'.",
+            "popularity": 1.002002,
+            "poster_path": null,
+            "release_date": "2020-12-08",
+            "title": "The Angel Investor",
+            "video": false,
+            "vote_average": 0,
+            "vote_count": 0
+        },
+        {
+            "adult": false,
+            "backdrop_path": null,
+            "genre_ids": [
+                28
+            ],
+            "id": 431976,
+            "original_language": "en",
+            "original_title": "Vanished",
+            "overview": "\"A former marine, Logan Walker (Villagomez), tries to unravel the mystery behind his parents death when he teams up with a CIA agent, Natasha Grace (Caldera), who decrypts a file that had confidential information that reveals the existence of a secret government organization that plans to take over the world by brainwashing everyone through social media, politics and religion. Believing that this organization was responsible for Walker's parents and Grace's partner's death, the two risks their lives to go on this journey to expose the organization and to stop the villains before they are caught and killed.\"",
+            "popularity": 1.002,
+            "poster_path": null,
+            "release_date": "2020-12-06",
+            "title": "Vanished",
+            "video": false,
+            "vote_average": 0,
+            "vote_count": 0
+        },
+        {
+            "adult": false,
+            "backdrop_path": null,
+            "genre_ids": [
+                878,
+                28
+            ],
+            "id": 432047,
+            "original_language": "en",
+            "original_title": "Eagle Shadow",
+            "overview": "Plot is unknown.",
+            "popularity": 1.002,
+            "poster_path": null,
+            "release_date": "2020-12-03",
+            "title": "Eagle Shadow",
+            "video": false,
+            "vote_average": 0,
+            "vote_count": 0
+        },
+        {
+            "adult": false,
+            "backdrop_path": null,
+            "genre_ids": [
+                18,
+                28,
+                12,
+                14,
+                878
+            ],
+            "id": 83533,
+            "original_language": "en",
+            "original_title": "Avatar 3",
+            "overview": "",
+            "popularity": 1.350187,
+            "poster_path": null,
+            "release_date": "2020-12-01",
+            "title": "Avatar 3",
+            "video": false,
+            "vote_average": 0,
+            "vote_count": 3
+        },
+        {
+            "adult": false,
+            "backdrop_path": null,
+            "genre_ids": [
+                28
+            ],
+            "id": 432049,
+            "original_language": "en",
+            "original_title": "Flexx: Redemption",
+            "overview": "Plot is unknown.",
+            "popularity": 1.002,
+            "poster_path": null,
+            "release_date": "2020-11-25",
+            "title": "Flexx: Redemption",
+            "video": false,
+            "vote_average": 0,
+            "vote_count": 0
+        },
+        {
+            "adult": false,
+            "backdrop_path": null,
+            "genre_ids": [
+                16
+            ],
+            "id": 432051,
+            "original_language": "en",
+            "original_title": "Untitled Disney Animation Project",
+            "overview": "Plot unknown.",
+            "popularity": 1.00292,
+            "poster_path": null,
+            "release_date": "2020-11-25",
+            "title": "Untitled Disney Animation Project",
+            "video": false,
+            "vote_average": 0,
+            "vote_count": 0
+        },
+        {
+            "adult": false,
+            "backdrop_path": null,
+            "genre_ids": [
+                14
+            ],
+            "id": 338953,
+            "original_language": "en",
+            "original_title": "Fantastic Beasts and Where to Find Them 3",
+            "overview": "The adventures of writer Newt Scamander in New York's secret community of witches and wizards seventy years before Harry Potter reads his book in school.",
+            "popularity": 1.020987,
+            "poster_path": null,
+            "release_date": "2020-11-19",
+            "title": "Fantastic Beasts and Where to Find Them 3",
+            "video": false,
+            "vote_average": 0,
+            "vote_count": 2
+        },
+        {
+            "adult": false,
+            "backdrop_path": null,
+            "genre_ids": [],
+            "id": 367738,
+            "original_language": "en",
+            "original_title": "Untitled Marvel Project (3)",
+            "overview": "An announced Marvel Studios production.",
+            "popularity": 1.002003,
+            "poster_path": null,
+            "release_date": "2020-11-06",
+            "title": "Untitled Marvel Project (3)",
+            "video": false,
+            "vote_average": 0,
+            "vote_count": 1
+        },
+        {
+            "adult": false,
+            "backdrop_path": null,
+            "genre_ids": [
+                28,
+                12,
+                14
+            ],
+            "id": 436969,
+            "original_language": "en",
+            "original_title": "Suicide Squad 2",
+            "overview": "",
+            "popularity": 1.223968,
+            "poster_path": null,
+            "release_date": "2020-08-06",
+            "title": "Suicide Squad 2",
+            "video": false,
+            "vote_average": 0,
+            "vote_count": 0
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/wzGiqDNBFzSnqIdpaMzVQm758j0.jpg",
+            "genre_ids": [
+                12,
+                28,
+                878
+            ],
+            "id": 298622,
+            "original_language": "en",
+            "original_title": "Cyborg",
+            "overview": "",
+            "popularity": 1.440181,
+            "poster_path": "/8bjERRC9G3AotgxTq5s0mLeIrVA.jpg",
+            "release_date": "2020-07-24",
+            "title": "Cyborg",
+            "video": false,
+            "vote_average": 0,
+            "vote_count": 1
+        },
+        {
+            "adult": false,
+            "backdrop_path": null,
+            "genre_ids": [
+                28,
+                12,
+                878
+            ],
+            "id": 297797,
+            "original_language": "en",
+            "original_title": "Green Lantern Corps",
+            "overview": "A group of humans join the Green Lantern Corps, an alien interstellar police force that protects the universe.",
+            "popularity": 1.522863,
+            "poster_path": null,
+            "release_date": "2020-07-23",
+            "title": "Green Lantern Corps",
+            "video": false,
+            "vote_average": 0,
+            "vote_count": 5
+        },
+        {
+            "adult": false,
+            "backdrop_path": null,
+            "genre_ids": [],
+            "id": 367737,
+            "original_language": "en",
+            "original_title": "Untitled Marvel Project (2)",
+            "overview": "An announced Marvel Studios production.",
+            "popularity": 1.003215,
+            "poster_path": null,
+            "release_date": "2020-07-10",
+            "title": "Untitled Marvel Project (2)",
+            "video": false,
+            "vote_average": 0,
+            "vote_count": 0
+        },
+        {
+            "adult": false,
+            "backdrop_path": null,
+            "genre_ids": [],
+            "id": 280476,
+            "original_language": "en",
+            "original_title": "The Passenger",
+            "overview": "Based on a Urban Legend",
+            "popularity": 1.012077,
+            "poster_path": "/6wDxfYoiADdyp6tru1KfIVw9uEi.jpg",
+            "release_date": "2020-07-06",
+            "title": "The Passenger",
+            "video": false,
+            "vote_average": 0,
+            "vote_count": 0
+        },
+        {
+            "adult": false,
+            "backdrop_path": null,
+            "genre_ids": [
+                10751,
+                16,
+                28,
+                12,
+                35
+            ],
+            "id": 438148,
+            "original_language": "en",
+            "original_title": "Minions 2",
+            "overview": "Plot is unknown.",
+            "popularity": 1.003368,
+            "poster_path": null,
+            "release_date": "2020-07-01",
+            "title": "Minions 2",
+            "video": false,
+            "vote_average": 0,
+            "vote_count": 0
+        }
+    ],
+    "total_pages": 15025,
+    "total_results": 300497
+}
