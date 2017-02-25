@@ -14,6 +14,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.polbins.themoviedb.R;
+import com.polbins.themoviedb.api.model.Images;
 import com.polbins.themoviedb.api.model.Movie;
 import com.polbins.themoviedb.app.App;
 
@@ -46,6 +47,7 @@ public class MainActivity extends AppCompatActivity implements
 
     private MoviesAdapter moviesAdapter;
     private EndlessScrollListener endlessScrollListener;
+    private Images images;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -102,7 +104,7 @@ public class MainActivity extends AppCompatActivity implements
     @Override
     public void showContent(List<Movie> movies, boolean isRefresh) {
         if (moviesAdapter == null) {
-            moviesAdapter = new MoviesAdapter(movies, this);
+            moviesAdapter = new MoviesAdapter(movies, this, images);
             contentView.setAdapter(moviesAdapter);
         } else {
             if (isRefresh) {
@@ -136,6 +138,11 @@ public class MainActivity extends AppCompatActivity implements
 
     @Override
     public void onConfigurationSet(Images images) {
+        this.images = images;
+
+        if (moviesAdapter != null) {
+            moviesAdapter.setImages(images);
+        }
     }
 
     @OnClick(R.id.textView)
