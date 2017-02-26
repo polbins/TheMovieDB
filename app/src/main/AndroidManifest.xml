@@ -4,7 +4,7 @@
           package="com.polbins.themoviedb">
 
     <uses-permission android:name="android.permission.INTERNET"/>
-    <uses-sdk tools:overrideLibrary="android.support.customtabs"/>
+    <uses-sdk tools:overrideLibrary="android.support.customtabs, jp.wasabeef.glide.transformations"/>
 
     <application
         android:name=".app.App"

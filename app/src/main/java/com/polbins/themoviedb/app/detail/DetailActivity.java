@@ -101,6 +101,7 @@ public class DetailActivity extends AppCompatActivity implements DetailContract.
             Glide.with(this)
                     .load(fullImageUrl)
                     .centerCrop()
+                    .crossFade()
                     .into(imageView);
         }
 

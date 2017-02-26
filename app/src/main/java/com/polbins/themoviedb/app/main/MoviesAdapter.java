@@ -52,6 +52,7 @@ public class MoviesAdapter extends RecyclerView.Adapter<MoviesAdapter.ViewHolder
             Glide.with(activity)
                     .load(fullImageUrl)
                     .centerCrop()
+                    .crossFade()
                     .into(holder.imageView);
         }
 
