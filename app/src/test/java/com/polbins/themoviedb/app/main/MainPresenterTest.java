@@ -17,6 +17,7 @@ import java.util.List;
 
 import static org.mockito.Matchers.any;
 import static org.mockito.Matchers.anyInt;
+import static org.mockito.Matchers.anyString;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
@@ -52,16 +53,16 @@ public class MainPresenterTest {
         this.images = configuration.images;
 
         // Mock API Calls
-        when(apiService.getMovies(defaultApiSortBy, 1))
+        when(apiService.getMovies(presenter.getReleaseDate(), defaultApiSortBy, 1))
                 .thenReturn(RetrofitTestUtil.createCall(moviesFirstPage));
-        when(apiService.getMovies(defaultApiSortBy, 2))
+        when(apiService.getMovies(presenter.getReleaseDate(), defaultApiSortBy, 2))
                 .thenReturn(RetrofitTestUtil.createCall(moviesSecondPage));
         when(apiService.getConfiguration())
                 .thenReturn(RetrofitTestUtil.createCall(configuration));
     }
 
     private void makeGetMoviesFail() {
-        when(apiService.getMovies(any(ApiService.SortBy.class), anyInt()))
+        when(apiService.getMovies(anyString(), any(ApiService.SortBy.class), anyInt()))
                 .thenReturn(RetrofitTestUtil.createCall(500, new Movies()));
     }
 

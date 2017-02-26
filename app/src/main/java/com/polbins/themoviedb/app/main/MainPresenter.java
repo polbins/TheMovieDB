@@ -1,8 +1,14 @@
 package com.polbins.themoviedb.app.main;
 
+import android.annotation.SuppressLint;
+import android.support.annotation.VisibleForTesting;
+
 import com.polbins.themoviedb.api.ApiService;
 import com.polbins.themoviedb.api.model.Configuration;
 import com.polbins.themoviedb.api.model.Movies;
+
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 
 import javax.inject.Inject;
 
@@ -65,7 +71,8 @@ public class MainPresenter implements MainContract.Presenter {
     }
 
     private void getMovies(final boolean isRefresh) {
-        Call<Movies> call = apiService.getMovies(ApiService.SortBy.RELEASE_DATE_DESCENDING, page);
+        Call<Movies> call = apiService.getMovies(getReleaseDate(),
+                ApiService.SortBy.RELEASE_DATE_DESCENDING, page);
         call.enqueue(new Callback<Movies>() {
             @Override
             public void onResponse(Call<Movies> call, Response<Movies> response) {
@@ -81,6 +88,15 @@ public class MainPresenter implements MainContract.Presenter {
                 view.showError();
             }
         });
+    }
+
+    @VisibleForTesting
+    public String getReleaseDate() {
+        Calendar cal = Calendar.getInstance();
+        @SuppressLint("SimpleDateFormat")
+        SimpleDateFormat format1 = new SimpleDateFormat("yyyy-MM-dd");
+
+        return format1.format(cal.getTime());
     }
 
     @Override

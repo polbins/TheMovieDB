@@ -34,7 +34,8 @@ public interface ApiService {
     }
 
     @GET("/3/discover/movie")
-    Call<Movies> getMovies(@Query("sort_by") SortBy sortBy, @Query("page") int page);
+    Call<Movies> getMovies(@Query("primary_release_date.lte") String releaseDate,
+                           @Query("sort_by") SortBy sortBy, @Query("page") int page);
 
     @GET("/3/movie/{id}")
     Call<Movie> getMovie(@Path("id") int id);
