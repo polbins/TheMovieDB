@@ -2,6 +2,7 @@ package com.polbins.themoviedb.app.detail;
 
 import com.polbins.themoviedb.api.ApiService;
 import com.polbins.themoviedb.api.model.Configuration;
+import com.polbins.themoviedb.api.model.Images;
 import com.polbins.themoviedb.api.model.Movie;
 
 import javax.inject.Inject;
@@ -18,6 +19,8 @@ public class DetailPresenter implements DetailContract.Presenter {
     private DetailContract.View view;
     private ApiService apiService;
 
+    private Images images;
+
     @Inject
     DetailPresenter(DetailContract.View view, ApiService apiService) {
         this.view = view;
@@ -27,17 +30,24 @@ public class DetailPresenter implements DetailContract.Presenter {
     @Override
     public void start(int movieId) {
         view.showLoading();
-        getConfiguration();
-        getMovie(movieId);
+
+        if (images == null) {
+            getConfiguration(movieId);
+        } else {
+            view.onConfigurationSet(images);
+            getMovie(movieId);
+        }
     }
 
-    private void getConfiguration() {
+    private void getConfiguration(final int movieId) {
         Call<Configuration> call = apiService.getConfiguration();
         call.enqueue(new Callback<Configuration>() {
             @Override
             public void onResponse(Call<Configuration> call, Response<Configuration> response) {
                 if (response.isSuccessful()) {
-                    view.onConfigurationSet(response.body().images);
+                    images = response.body().images;
+                    view.onConfigurationSet(images);
+                    getMovie(movieId);
                 }
             }
 
