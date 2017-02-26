@@ -1,7 +1,12 @@
 package com.polbins.themoviedb.app.detail;
 
+import android.content.Intent;
+import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
+import android.support.customtabs.CustomTabsIntent;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
 import android.view.View;
@@ -21,6 +26,7 @@ import javax.inject.Inject;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 
 public class DetailActivity extends AppCompatActivity implements DetailContract.View {
     public static final String MOVIE_ID = "movie_id";
@@ -194,6 +200,22 @@ public class DetailActivity extends AppCompatActivity implements DetailContract.
         overviewHeader.setVisibility(visibility);
         overviewTextView.setVisibility(visibility);
         bookButton.setVisibility(visibility);
+    }
+
+    @OnClick(R.id.bookButton)
+    void onBookButtonClick() {
+        String url = getString(R.string.web_url) + movieId;
+
+        if (Build.VERSION.SDK_INT >= 16) {
+            CustomTabsIntent.Builder builder = new CustomTabsIntent.Builder();
+            builder.setToolbarColor(ContextCompat.getColor(this, R.color.colorPrimary));
+            CustomTabsIntent customTabsIntent = builder.build();
+            customTabsIntent.launchUrl(this, Uri.parse(url));
+        } else {
+            Intent i = new Intent(Intent.ACTION_VIEW);
+            i.setData(Uri.parse(url));
+            startActivity(i);
+        }
     }
 
 }

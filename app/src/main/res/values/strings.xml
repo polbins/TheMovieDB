@@ -1,6 +1,8 @@
 <resources>
     <string name="app_name">The Movie DB</string>
     <string name="base_url">https://api.themoviedb.org/</string>
+    <string name="web_url">https://www.themoviedb.org/movie/</string>
+    <string name="web_title">Book a Movie</string>
     <string name="api_key">3fa9058382669f72dcb18fb405b7a831</string>
     <string name="generic_error">Oops! Something went wrong,\nPlease try again later...</string>
     <string name="book_the_movie_button">Book the Movie</string>
