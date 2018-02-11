@@ -15,6 +15,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
+import com.bumptech.glide.request.RequestOptions;
 import com.polbins.themoviedb.R;
 import com.polbins.themoviedb.api.model.Genre;
 import com.polbins.themoviedb.api.model.Images;
@@ -27,6 +28,8 @@ import javax.inject.Inject;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
+
+import static com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions.withCrossFade;
 
 public class DetailActivity extends AppCompatActivity implements DetailContract.View {
     public static final String MOVIE_ID = "movie_id";
@@ -100,8 +103,8 @@ public class DetailActivity extends AppCompatActivity implements DetailContract.
         if (!fullImageUrl.isEmpty()) {
             Glide.with(this)
                     .load(fullImageUrl)
-                    .centerCrop()
-                    .crossFade()
+                    .apply(RequestOptions.centerCropTransform())
+                    .transition(withCrossFade())
                     .into(imageView);
         }
 

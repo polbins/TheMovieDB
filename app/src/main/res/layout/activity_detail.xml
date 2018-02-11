@@ -26,6 +26,7 @@
                 android:layout_width="0dp"
                 android:layout_height="@dimen/detailPosterHeight"
                 android:layout_weight="1"
+                android:scaleType="centerCrop"
                 android:background="@android:color/darker_gray"/>
 
             <LinearLayout

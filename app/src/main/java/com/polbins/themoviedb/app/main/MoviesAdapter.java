@@ -10,6 +10,9 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
+import com.bumptech.glide.TransitionOptions;
+import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions;
+import com.bumptech.glide.request.RequestOptions;
 import com.polbins.themoviedb.R;
 import com.polbins.themoviedb.api.model.Images;
 import com.polbins.themoviedb.api.model.Movie;
@@ -18,6 +21,8 @@ import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+
+import static com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions.withCrossFade;
 
 /**
  * Created by polbins on 25/02/2017.
@@ -51,8 +56,8 @@ public class MoviesAdapter extends RecyclerView.Adapter<MoviesAdapter.ViewHolder
         if (!fullImageUrl.isEmpty()) {
             Glide.with(activity)
                     .load(fullImageUrl)
-                    .centerCrop()
-                    .crossFade()
+                    .apply(RequestOptions.centerCropTransform())
+                    .transition(withCrossFade())
                     .into(holder.imageView);
         }
 
